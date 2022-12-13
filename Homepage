@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Placeholder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            padding-top: 150px;
+            padding-bottom: 40px;
+            font-family: Arial;
+        }
+        /*properties header*/
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        /*for the  footer*/
+        .container-ft {
+            width:80%;
+            margin: 0px 10px;
+        }
+
+        .fixed-header, .fixed-footer {
+            width: 100%;
+            position: fixed;
+            background: #0E1721;
+            /* background: linear-gradient(#2b5876,#4e4376);*/
+            /* background: #333;*/
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .fixed-header {
+            top: 0;
+            left: 0;
+        }
+
+        .fixed-footer {
+            bottom: 0;
+            left: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 260px;
+            padding-left:180px;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .container p {
+            line-height: 200px;
+        }
+        /*this is where the contents of the page will go*/
+        #parent {
+            display:flex;
+            flex-wrap:wrap;
+            height:750px;
+            gap:10px;
+            align-items:stretch;
+            margin-top:-50px;
+            
+        }
+        #legend {
+            width: 150px;
+            background: linear-gradient(118deg, #141e30, #243b55);
+            border: 1px #0E1721 solid;
+            padding-right: 8px;
+            padding-left: 22px;
+            padding-top: 15px;
+            margin: -33px -8px -39px -10px;
+        }
+       
+        /*This is for the search bar*/
+        .search {
+            width: 100%;
+            left:-5px;
+            bottom:-14px;
+            position:relative;
+            display:flex;
+            
+        }
+        .searchName {
+            width:100%;
+            border: 2px solid #000000;
+            border-right:none;
+            padding:5px;
+            height:20px;
+            border-radius:5px 0 0 5px;
+            outline:none;
+        }
+        .searchButton {
+            width: 40px;
+            border: 2px solid #000000;
+            background: #424051;
+            text-align: center;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .wrap {
+            position:inherit;
+            top:50%;
+            left:50%;
+        }
+        /*the dots will go here*/
+        #dots {
+            flex: 1;
+            background: url(https://cdn.discordapp.com/attachments/480426729047982102/1051710269992218664/image.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px black solid;
+            text-align: center;
+            margin-top: -33px;
+            margin-left: -9px;
+            border-right-width: 0px;
+            margin-bottom: -39px;
+        }
+        h1 {
+            font-size: 25px;
+            color: #dfdfdf;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#contact">Contact</a>
+                <a href="#login">Log in</a>
+            </nav>
+        </div>
+    </div>
+    <div id="parent">
+        <div id="dots"></div>
+        <div id="legend">
+            <form action="#" style="margin-left: -10px;">
+                <h1>Agent Status</h1>
+                <p style="color:white;">
+                    <input type="radio" id="available" name="status" value="avail" />
+                    <label for="available">Available</label><br />
+                </p>
+                <p style="color:white;">
+                    <input type="radio" id="on_call" name="status" value="on call" />
+                    <label for="on_call">On Call</label><br />
+                </p>
+                <p style="color:white;">
+                    <input type="radio" id="idle" name="status" value="idle" />
+                    <label for="idle">Idle</label><br />
+                </p>
+                <p style="color:white;">
+                    <input type="radio" id="off_call" name="status" value="off call">
+                    <label for="off_call">Off Call</label><br />
+                </p>
+                <p style="color:white">
+                    <input type="radio" id="logged_out" name="status" value="logged out" />
+                    <label for="logged_out">Logged Out</label><br />
+                </p>
+                <p>
+                    <input type="submit" value="Submit" style="margin:10px;" />
+                </p>
+            </form>
+            <div class="wrap">
+                <div class="search">
+                    <input type="text" class="searchName" placeholder="Type" />
+                    <button type="submit" class="searchButton"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-footer">
+        <div class="container-ft">Copyright &copy; 2022</div>
+    </div>
+</body>
+</html>
